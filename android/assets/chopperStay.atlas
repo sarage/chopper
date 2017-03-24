@@ -1,0 +1,31 @@
+
+chopperStay.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+01
+  rotate: false
+  xy: 1, 1
+  size: 400, 516
+  orig: 400, 516
+  offset: 0, 0
+  index: -1
+02
+  rotate: false
+  xy: 403, 1
+  size: 400, 516
+  orig: 400, 516
+  offset: 0, 0
+  index: -1
+
+chopperStay2.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+03
+  rotate: false
+  xy: 1, 1
+  size: 400, 516
+  orig: 400, 516
+  offset: 0, 0
+  index: -1
