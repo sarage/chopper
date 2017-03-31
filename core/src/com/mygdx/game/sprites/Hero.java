@@ -10,7 +10,7 @@ import java.util.Vector;
  */
 
 public class Hero {
-    public static final int GRAVITY = -15;
+    public static final int GRAVITY = -1;
     private Vector3 position;
     private Vector3 velosity;
 
@@ -19,7 +19,7 @@ public class Hero {
     public Hero(int x, int y){
         position = new Vector3(x,y,0);
         velosity = new Vector3(0,0,0);
-        hero = new Texture("hero.jpg");
+        hero = new Texture("hero.png");
     }
 
     public Vector3 getPosition() {

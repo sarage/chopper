@@ -12,11 +12,13 @@ import com.mygdx.game.sprites.Hero;
 public class PlayState extends State{
 
     private Hero hero;
+    private Texture bg;
 
     public PlayState(GameStateManagment gsm) {
         super(gsm);
         hero = new Hero(50,300);
         camera.setToOrtho(false, MyGdxGame.WIDTH/2,MyGdxGame.HEIGHT/2);
+        bg = new Texture("wall.jpg");
     }
 
     @Override
@@ -25,14 +27,13 @@ public class PlayState extends State{
     }
 
     @Override
-    public void update(float dt) {
-        hero.update(dt);
-    }
+    public void update(float dt) { hero.update(dt);    }
 
-    @Override
+   @Override
     public void render(SpriteBatch sb) {
         sb.setProjectionMatrix(camera.combined);
         sb.begin();
+        sb.draw(bg, camera.position.x-(camera.viewportWidth),0);
         sb.draw(hero.getHero(),hero.getPosition().x,hero.getPosition().y);
         sb.end();
     }

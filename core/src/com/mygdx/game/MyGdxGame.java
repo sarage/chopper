@@ -10,10 +10,10 @@ import com.mygdx.game.states.GameStateManagment;
 import com.mygdx.game.states.MenuState;
 
 public class MyGdxGame extends ApplicationAdapter {
-	public static final int WIDTH = 800;
-	public static final int HEIGHT = 480;
+	public static final int WIDTH = 500;
+	public static final int HEIGHT = 1000;
 
-	public static final String TITLE = "Cheppo";
+	public static final String TITLE = "Chopper";
 
     private GameStateManagment gsm;
 	private SpriteBatch batch;
