@@ -19,6 +19,9 @@ public class Hero {
     private Vector3 position;
     private Texture texture;
     private Animation heroAnimation;
+    private String state="right_go.png";
+    private int statediv=6;
+    //private TurnToLeft heroLeft;
     //public enum State {FALLING, JUMPING, WALKING,STANDING};
    // public State currentState;
    // public State previousState;
@@ -28,8 +31,8 @@ public class Hero {
 //
     public Hero(int x, int y){
         position = new Vector3(x,y,0);
-        texture = new Texture("stay.png");
-        heroAnimation = new Animation(new TextureRegion(texture),3,1f);
+        texture = new Texture(state);
+        heroAnimation = new Animation(new TextureRegion(texture), statediv, 1f);
        // currentState = State.STANDING;
         //previousState = State.STANDING;
        // stateTimer = 0;

@@ -1,7 +1,9 @@
 package com.mygdx.game.states;
 
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.math.Vector3;
 import com.mygdx.game.MyGdxGame;
 import com.mygdx.game.sprites.Hero;
 
@@ -38,7 +40,13 @@ public class PlayState extends State{
         sb.draw(background, 0,0, MyGdxGame.WIDTH+750, MyGdxGame.HEIGHT);
         sb.draw(hero.getHero(),hero.getPosition().x,hero.getPosition().y);
         sb.end();
-    }
+
+        /*if (Gdx.input.isTouched()){
+            Vector3 touch_pos = new Vector3();
+            touch_pos.set(Gdx.input.getX(), Gdx.input.getY(), 0);
+            camera.unproject(touch_pos);
+        }*/
+ }
 
     @Override
     public void dispose() {
