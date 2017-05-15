@@ -19,13 +19,11 @@ public class Hero {
     private Vector3 position;
     private Texture texture;
     private Animation heroAnimation;
-    private String state="right_go.png";
-    private int statediv=6;
 
     public Hero(int x, int y){
         position = new Vector3(x,y,0);
-        texture = new Texture(state);
-        heroAnimation = new Animation(new TextureRegion(texture), statediv, 1f);
+        texture = new Texture("left_go.png");
+        heroAnimation = new Animation(new TextureRegion(texture), 6, 1f);
     }
 
     public Vector3 getPosition() {
