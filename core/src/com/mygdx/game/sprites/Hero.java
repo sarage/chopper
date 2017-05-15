@@ -19,13 +19,13 @@ public class Hero {
     private Vector3 position;
     private Texture texture;
     private Animation heroAnimation;
-    private String state="stay.png";
-    private int statediv=3;
+    private String state="right_go.png";
+    private int statediv=6;
 
     public Hero(int x, int y){
-            position = new Vector3(x, y, 0);
-            texture = new Texture(state);
-            heroAnimation = new Animation(new TextureRegion(texture), statediv, 1f);
+        position = new Vector3(x,y,0);
+        texture = new Texture(state);
+        heroAnimation = new Animation(new TextureRegion(texture), statediv, 1f);
     }
 
     public Vector3 getPosition() {
@@ -42,41 +42,5 @@ public class Hero {
 
     public void dispose(){
         texture.dispose();
-    }
-
-    public void setPosition(Vector3 position) {
-        this.position = position;
-    }
-
-    public Texture getTexture() {
-        return texture;
-    }
-
-    public void setTexture(Texture texture) {
-        this.texture = texture;
-    }
-
-    public Animation getHeroAnimation() {
-        return heroAnimation;
-    }
-
-    public void setHeroAnimation(Animation heroAnimation) {
-        this.heroAnimation = heroAnimation;
-    }
-
-    public String getState() {
-        return state;
-    }
-
-    public void setState(String state) {
-        this.state = state;
-    }
-
-    public int getStatediv() {
-        return statediv;
-    }
-
-    public void setStatediv(int statediv) {
-        this.statediv = statediv;
     }
 }
