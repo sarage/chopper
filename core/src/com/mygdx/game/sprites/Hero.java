@@ -17,11 +17,14 @@ import java.util.Vector;
 
 public class Hero {
     private Vector3 position;
+    private static final int WALL = 100;
+    private Vector3 velosity;
     private Texture texture;
     private Animation heroAnimation;
 
     public Hero(int x, int y){
         position = new Vector3(x,y,0);
+        velosity = new Vector3(0,0,0);
         texture = new Texture("left_go.png");
         heroAnimation = new Animation(new TextureRegion(texture), 6, 1f);
     }
@@ -34,7 +37,18 @@ public class Hero {
         return heroAnimation.getFrame();
     }
 
+    public static int getWALL() {
+        return WALL;
+    }
+
+    public Texture getTexture() {
+        return texture;
+    }
+
     public void update(float dt){
+        velosity.add(WALL,0,0);
+        velosity.scl(dt);
+        position.add(velosity.x,0,0);
         heroAnimation.updates(dt);
     }
 
