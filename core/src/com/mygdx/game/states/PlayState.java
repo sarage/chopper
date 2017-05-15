@@ -15,6 +15,7 @@ public class PlayState extends State{
 
     private Hero hero;
     private Texture background;
+    private GameStateManagment gsm;
 
     public PlayState(GameStateManagment gsm) {
         super(gsm);
@@ -25,7 +26,16 @@ public class PlayState extends State{
 
     @Override
     protected void handleInput() {
-
+        if(Gdx.input.justTouched()) {
+//            if (Gdx.input.isCatchBackKey()) {
+//                gsm.set(new MenuState(gsm));
+//            }
+            if (Gdx.input.isTouched()){
+                Vector3 touch_pos = new Vector3();
+                touch_pos.set(Gdx.input.getX(), Gdx.input.getY(), 0);
+//                camera.unproject(touch_pos);
+            }
+        }
     }
 
     @Override
@@ -40,12 +50,6 @@ public class PlayState extends State{
         sb.draw(background, 0,0, MyGdxGame.WIDTH+750, MyGdxGame.HEIGHT);
         sb.draw(hero.getHero(),hero.getPosition().x,hero.getPosition().y);
         sb.end();
-
-        /*if (Gdx.input.isTouched()){
-            Vector3 touch_pos = new Vector3();
-            touch_pos.set(Gdx.input.getX(), Gdx.input.getY(), 0);
-            camera.unproject(touch_pos);
-        }*/
  }
 
     @Override

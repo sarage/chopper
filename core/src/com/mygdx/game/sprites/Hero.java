@@ -22,13 +22,14 @@ public class Hero {
     private String state="right_go.png";
     private int statediv=6;
     //private TurnToLeft heroLeft;
-    //public enum State {FALLING, JUMPING, WALKING,STANDING};
+    public enum State {STAY, LEFT, LEFTGO,RIGHT, RIGHTGO}
    // public State currentState;
    // public State previousState;
-   // private Animation heroWalk;
+    private Animation heroRightWalk;
+    private Animation heroLeftWalk;
    // private Animation heroJump;
   //  private float stateTimer;
-//
+
     public Hero(int x, int y){
         position = new Vector3(x,y,0);
         texture = new Texture(state);
@@ -44,6 +45,7 @@ public class Hero {
         heroWalk = new Animation(0.1f,frames);
         frames.clear();*/
     }
+//    public void stating(string stat){}
 
     public Vector3 getPosition() {
         return position;

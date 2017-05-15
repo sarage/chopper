@@ -1,6 +1,7 @@
 package com.mygdx.game.states;
 
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.scenes.scene2d.Stage;
 
 import java.util.Stack;
 
@@ -8,7 +9,7 @@ import java.util.Stack;
  * Created by aizhan on 3/24/17.
  */
 
-public class GameStateManagment {
+public class GameStateManagment extends Stage {
 
     private Stack<State> states;
 
