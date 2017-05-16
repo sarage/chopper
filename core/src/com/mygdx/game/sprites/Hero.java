@@ -87,7 +87,11 @@ public class Hero {
         velosity.x=1920;
     }
 
-//    public void wa
+    public void walkright(){
+        state = 5;
+        texture = new Texture("right_go.png");
+        heroAnimation = new Animation(new TextureRegion(texture), 6, 1f);
+    }
 
     public int getX(){
         return (int)this.position.x;
