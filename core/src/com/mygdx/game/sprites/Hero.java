@@ -48,9 +48,12 @@ public class Hero {
     }
 
     public void update(float dt){
-        velosity.add(WALL,0,0);
+        if (position.x>0)
+            velosity.add(WALL,0,0);
         velosity.scl(dt);
         position.add(velosity.x,0,0);
+        if (position.x>1900)
+            position.x=1900;
         heroAnimation.updates(dt);
     }
 

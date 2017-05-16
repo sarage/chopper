@@ -17,7 +17,7 @@ public class Flask2 {
 
     public Flask2(int x, int y){
         position = new Vector3(x,y,0);
-        texture = new Texture("flask3.png");
+        texture = new Texture("flask1.png");
         flask2Animation = new Animation(new TextureRegion(texture), 3, 1f);
     }
 
