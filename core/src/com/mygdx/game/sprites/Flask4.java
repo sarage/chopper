@@ -8,25 +8,25 @@ import com.badlogic.gdx.math.Vector3;
  * Created by student on 5/16/2017.
  */
 
-public class Flask1 {
+public class Flask4 {
     private Vector3 position;
     private Texture texture;
-    private Animation flask1Animation;
+    private Animation flask4Animation;
 
 
 
-    public Flask1(int x, int y){
+    public Flask4(int x, int y){
         position = new Vector3(x,y,0);
-        texture = new Texture("flask2.png");
-        flask1Animation = new Animation(new TextureRegion(texture), 3, 1f);
+        texture = new Texture("flask3.png");
+        flask4Animation = new Animation(new TextureRegion(texture), 3, 1f);
     }
 
     public Vector3 getPosition() {
         return position;
     }
 
-    public TextureRegion getFlask1() {
-        return flask1Animation.getFrame();
+    public TextureRegion getFlask4() {
+        return flask4Animation.getFrame();
     }
 
     public Texture getTexture() {
@@ -34,7 +34,7 @@ public class Flask1 {
     }
 
     public void update(float dt){
-       flask1Animation.updates(dt);
+        flask4Animation.updates(dt);
     }
 
     public void dispose(){
