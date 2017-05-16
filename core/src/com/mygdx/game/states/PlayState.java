@@ -26,20 +26,14 @@ public class PlayState extends State{
 
     @Override
     protected void handleInput() {
-        if(Gdx.input.justTouched()) {
-//            if (Gdx.input.isCatchBackKey()) {
-//                gsm.set(new MenuState(gsm));
-//            }
-            if (Gdx.input.isTouched()){
-                Vector3 touch_pos = new Vector3();
-                touch_pos.set(Gdx.input.getX(), Gdx.input.getY(), 0);
-//                camera.unproject(touch_pos);
-            }
+        if (Gdx.input.justTouched()){
+            hero.Walking();
         }
     }
 
     @Override
     public void update(float dt) {
+        handleInput();
         hero.update(dt);
     }
 

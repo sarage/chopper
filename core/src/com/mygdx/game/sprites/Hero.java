@@ -17,10 +17,12 @@ import java.util.Vector;
 
 public class Hero {
     private Vector3 position;
-    private static final int WALL = 100;
+    private static final int WALL = 0;
     private Vector3 velosity;
     private Texture texture;
     private Animation heroAnimation;
+
+
 
     public Hero(int x, int y){
         position = new Vector3(x,y,0);
@@ -50,6 +52,10 @@ public class Hero {
         velosity.scl(dt);
         position.add(velosity.x,0,0);
         heroAnimation.updates(dt);
+    }
+
+    public void Walking(){
+        velosity.x=1920;
     }
 
     public void dispose(){
