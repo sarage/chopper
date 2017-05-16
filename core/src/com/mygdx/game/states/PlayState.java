@@ -58,10 +58,10 @@ public class PlayState extends State{
         flasksCount = 0;
         background = new Texture("wall.png");
 
-        mapLoader = new TmxMapLoader();
-        map = mapLoader.load("wall.png");
-        renderer = new OrthogonalTiledMapRenderer(map);
-        gamecam.position.set(gamePort.getScreenWidth()/2,gamePort.getScreenHeight()/2,0);
+//        mapLoader = new TmxMapLoader();
+//        map = mapLoader.load("wall.png");
+//        renderer = new OrthogonalTiledMapRenderer(map);
+//        gamecam.position.set(gamePort.getScreenWidth()/2,gamePort.getScreenHeight()/2,0);
         
     }
 
@@ -74,9 +74,9 @@ public class PlayState extends State{
                 hero.turnleft();
             }
 //            -если heroX меньше чем touchX и позиция влево то надо пойти влево
-//            else if(hero.getX() < Gdx.input.getX() && hero.getState() == 2){
-//                hero.walkleft();
-//            }
+            else if(hero.getX() < Gdx.input.getX() && hero.getState() == 2){
+               hero.walkleft();
+            }
             else if(hero.getX() > Gdx.input.getX() && hero.getState() == 2 || hero.getState() == 4){
                 // если heroX больше чем touchX и позиция пойти влево или влево то надо прямо
                 hero.stay();
