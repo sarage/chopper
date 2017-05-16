@@ -47,12 +47,21 @@ public class Hero {
     }
 
     public void update(float dt){
-        if (position.x > 0)
-            velosity.add(WALL, 0, 0);
-        velosity.scl(dt);
-        position.add(velosity.x, 0, 0);
-        if (position.x > 1700)
-            position.x = 1700;
+        if (this.getState() == 4){
+            if (position.x > 0)
+                velosity.add(WALL, 0, 0);
+            velosity.scl(dt);
+            position.add(velosity.x, 0, 0);
+            if (position.x > 1700)
+                position.x = 1700;
+        }
+        else {
+            if (position.x > 0)
+                velosity.add(WALL, 0, 0);
+            velosity.scl(dt);
+//            position.add(velosity.x, 0, 0);
+            position.sub(velosity.x, 0, 0);
+        }
         heroAnimation.updates(dt);
         bound.setPosition(position.x, position.y);
     }
