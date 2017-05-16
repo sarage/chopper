@@ -1,15 +1,8 @@
 package com.mygdx.game.sprites;
 
-import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.graphics.TextureData;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
-import com.badlogic.gdx.graphics.g3d.environment.AmbientCubemap;
-import com.badlogic.gdx.graphics.g3d.utils.shapebuilders.ArrowShapeBuilder;
 import com.badlogic.gdx.math.Vector3;
-import com.badlogic.gdx.utils.Array;
-
-import java.util.Vector;
 
 /**
  * Created by aizhan on 3/24/17.
@@ -27,8 +20,8 @@ public class Hero {
     public Hero(int x, int y){
         position = new Vector3(x,y,0);
         velosity = new Vector3(0,0,0);
-        texture = new Texture("left_go.png");
-        heroAnimation = new Animation(new TextureRegion(texture), 6, 1f);
+        texture = new Texture("stay.png");
+        heroAnimation = new Animation(new TextureRegion(texture), 3, 1f);
     }
 
     public Vector3 getPosition() {
@@ -52,8 +45,8 @@ public class Hero {
             velosity.add(WALL,0,0);
         velosity.scl(dt);
         position.add(velosity.x,0,0);
-        if (position.x>1900)
-            position.x=1900;
+        if (position.x>1700)
+            position.x=1700;
         heroAnimation.updates(dt);
     }
 
