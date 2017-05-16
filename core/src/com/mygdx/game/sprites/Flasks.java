@@ -2,31 +2,34 @@ package com.mygdx.game.sprites;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
+import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.math.Vector3;
 
 /**
  * Created by student on 5/16/2017.
  */
 
-public class Flask4 {
+public class Flasks {
+
     private Vector3 position;
     private Texture texture;
-    private Animation flask4Animation;
+    private Animation flaskAnimation;
+    private Rectangle bound;
 
 
-
-    public Flask4(int x, int y){
+    public Flasks(String st, int x, int y){
         position = new Vector3(x,y,0);
-        texture = new Texture("flask3.png");
-        flask4Animation = new Animation(new TextureRegion(texture), 3, 1f);
+        texture = new Texture(st);
+        flaskAnimation = new Animation(new TextureRegion(texture), 3, 1f);
+        bound = new Rectangle(x, y, texture.getWidth(), texture.getHeight());
     }
 
     public Vector3 getPosition() {
         return position;
     }
 
-    public TextureRegion getFlask4() {
-        return flask4Animation.getFrame();
+    public TextureRegion getFlask() {
+        return flaskAnimation.getFrame();
     }
 
     public Texture getTexture() {
@@ -34,7 +37,7 @@ public class Flask4 {
     }
 
     public void update(float dt){
-        flask4Animation.updates(dt);
+        flaskAnimation.updates(dt);
     }
 
     public void dispose(){
