@@ -1,14 +1,8 @@
 package com.mygdx.game.states;
 
 import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.Input;
 import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.graphics.g2d.Batch;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
-import com.badlogic.gdx.scenes.scene2d.Event;
-import com.badlogic.gdx.scenes.scene2d.EventListener;
-import com.badlogic.gdx.scenes.scene2d.InputListener;
-import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.badlogic.gdx.scenes.scene2d.utils.TextureRegionDrawable;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.scenes.scene2d.ui.ImageButton;
@@ -64,13 +58,6 @@ public class MenuState extends State{
         stage.addActor(contin);
         stage.addActor(sound);
         stage.addActor(quit);
-//        play.addListener(new InputListener() {
-//            public boolean touchDown() {
-//                gsm.set(new PlayState(gsm));
-//            }
-//        };
-//        b = new SpriteBatch();
-//        b.draw(background, 0,0, MyGdxGame.WIDTH, MyGdxGame.HEIGHT);
     }
 
     @Override
@@ -79,9 +66,6 @@ public class MenuState extends State{
             if (play.isPressed()) {
                 gsm.set(new PlayState(gsm));
             }
-//            if (sound.isPressed()){
-//                music.stop();
-//            }
             if (quit.isPressed()){
                 Gdx.app.exit();
             }
@@ -104,21 +88,10 @@ public class MenuState extends State{
         stage.getBatch().draw(background, 0,0, MyGdxGame.WIDTH, MyGdxGame.HEIGHT);
         stage.getBatch().end();
         stage.draw();
-        //        batch.draw(background, 0,0, MyGdxGame.WIDTH, MyGdxGame.HEIGHT);
-//        sb.draw(playBtn, (MyGdxGame.WIDTH/2)-(playBtn.getWidth()), (MyGdxGame.HEIGHT)-(playBtn.getHeight()+80));
-//        sb.draw(contBtn, (MyGdxGame.WIDTH/2)-(contBtn.getWidth()), (MyGdxGame.HEIGHT)-(contBtn.getHeight()+320));
-//        sb.draw(soundBtn, (MyGdxGame.WIDTH/2)-(soundBtn.getWidth()),(MyGdxGame.HEIGHT)-(soundBtn.getHeight()+550));
-//        sb.draw(quitBtn, (MyGdxGame.WIDTH/2)-(quitBtn.getWidth()), (MyGdxGame.HEIGHT)-(quitBtn.getHeight()+780));
         batch.end();
     }
 
     @Override
     public void dispose() {
-//        background.dispose();
-//        stage.act();
-//        playBtn.dispose();
-//        contBtn.dispose();
-//        soundBtn.dispose();
-//        quitBtn.dispose();
     }
 }
