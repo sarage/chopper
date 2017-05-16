@@ -28,6 +28,10 @@ public class Flasks {
         return position;
     }
 
+    public boolean collite (Rectangle hero){
+        return hero.overlaps(bound);
+    }
+
     public TextureRegion getFlask() {
         return flaskAnimation.getFrame();
     }
@@ -42,5 +46,9 @@ public class Flasks {
 
     public void dispose(){
         texture.dispose();
+    }
+
+    public void remove(){
+        this.remove();
     }
 }
