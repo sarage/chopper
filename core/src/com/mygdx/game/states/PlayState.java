@@ -78,10 +78,14 @@ public class PlayState extends State{
             }
 //            -если heroX меньше чем touchX и позиция влево то надо пойти влево
             else if(hero.getX() < Gdx.input.getX() && hero.getState() == 2){
+<<<<<<< HEAD
+               hero.walkleft();
+=======
                 hero.walkleft(Gdx.input.getX());
             }
             else if(hero.getX() < Gdx.input.getX() && hero.getState() == 4){
                 hero.Walking();
+>>>>>>> 45184f0e0ca585c64c06e5621b59854a1a7c4827
             }
             else if(hero.getX() > Gdx.input.getX() && hero.getState() == 2 || hero.getState() == 4){
                 // если heroX больше чем touchX и позиция пойти влево или влево то надо прямо

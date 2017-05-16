@@ -11,7 +11,7 @@ import com.badlogic.gdx.math.Vector3;
 
 public class Hero {
     private Vector3 position;
-    private static final int WALL = 0;
+    private static final int WALL =0;
     private Vector3 velosity;
     private Texture texture;
     private Animation heroAnimation;
