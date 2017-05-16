@@ -30,7 +30,7 @@ public class PlayState extends State{
         flask1 = new Flasks("flask2.png", 270,195);
         flask2 = new Flasks("flask1.png",283,330);
         flask3 = new Flasks("flask4.png",630,450);
-        flask4 = new Flasks("flask3.png",500,100);
+        flask4 = new Flasks("flask3.png",1550,230);
         flasksCount = 0;
         background = new Texture("wall.png");
     }
@@ -104,7 +104,7 @@ public class PlayState extends State{
         sb.draw(flask1.getFlask(), flask1.getPosition().x,flask1.getPosition().y);
         sb.draw(flask2.getFlask(), flask2.getPosition().x,flask2.getPosition().y);
         sb.draw(flask3.getFlask(), flask3.getPosition().x,flask3.getPosition().y);
-//        sb.draw(flask4.getFlask(), flask4.getPosition().x,flask4.getPosition().y);
+        sb.draw(flask4.getFlask(), flask4.getPosition().x,flask4.getPosition().y);
         sb.draw(hero.getHero(),hero.getPosition().x,hero.getPosition().y);
         sb.end();
  }
