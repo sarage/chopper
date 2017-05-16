@@ -50,11 +50,14 @@ public class PlayState extends State{
         flask1 = new Flasks("flask2.png", 270,195);
         flask2 = new Flasks("flask1.png",283,330);
         flask3 = new Flasks("flask4.png",630,450);
-        flask4 = new Flasks("flask3.png",500,100);
+
+        flask4 = new Flasks("flask3.png",1550,230);
+
         /*background = new ParallaxBackground(new ParallaxLayer[]{
                 new ParallaxLayer(new TextureRegion(new Texture("wall1.png")), new Vector2(1, 1), new Vector2(0, 0)),
                 new ParallaxLayer(new TextureRegion(new Texture("wall2.png")), new Vector2(1, 1), new Vector2(0, 0)),
         }, 2000, 500, new Vector2(50, 0));*/
+
         flasksCount = 0;
         background = new Texture("wall.png");
 
@@ -75,7 +78,14 @@ public class PlayState extends State{
             }
 //            -если heroX меньше чем touchX и позиция влево то надо пойти влево
             else if(hero.getX() < Gdx.input.getX() && hero.getState() == 2){
+<<<<<<< HEAD
                hero.walkleft();
+=======
+                hero.walkleft(Gdx.input.getX());
+            }
+            else if(hero.getX() < Gdx.input.getX() && hero.getState() == 4){
+                hero.Walking();
+>>>>>>> 45184f0e0ca585c64c06e5621b59854a1a7c4827
             }
             else if(hero.getX() > Gdx.input.getX() && hero.getState() == 2 || hero.getState() == 4){
                 // если heroX больше чем touchX и позиция пойти влево или влево то надо прямо
@@ -86,9 +96,12 @@ public class PlayState extends State{
                 hero.turnright();
             }
 //            -если heroX больше чем touchX и позиция вправо то пойти вправо
-//            else if (hero.getX() > Gdx.input.getX() && hero.getState() == 3){
-//                hero.walkright();
-//            }
+            else if (hero.getX() > Gdx.input.getX() && hero.getState() == 3){
+                hero.walkright();
+            }
+            else if (hero.getX() > Gdx.input.getX() && hero.getState() == 5){
+                hero.walkright();
+            }
             else if (hero.getX() < Gdx.input.getX() && hero.getState() == 3 || hero.getState()==5){
                 // если heroX меньше чем touchX и позиция право или пойти вправо то прямо
                 hero.stay();
@@ -136,7 +149,7 @@ public class PlayState extends State{
         sb.draw(flask1.getFlask(), flask1.getPosition().x,flask1.getPosition().y);
         sb.draw(flask2.getFlask(), flask2.getPosition().x,flask2.getPosition().y);
         sb.draw(flask3.getFlask(), flask3.getPosition().x,flask3.getPosition().y);
-         //sb.draw(flask4.getFlask(), flask4.getPosition().x,flask4.getPosition().y);
+        sb.draw(flask4.getFlask(), flask4.getPosition().x,flask4.getPosition().y);
         sb.draw(hero.getHero(),hero.getPosition().x,hero.getPosition().y);
         sb.end();
  }

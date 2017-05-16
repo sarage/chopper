@@ -17,6 +17,7 @@ public class Hero {
     private Animation heroAnimation;
     private Rectangle bound;
     private int state; //1-stay; 2-turn left; 3-turn right; 4-left go; 5- right go;
+    private int edge;
 
 
     public Hero(int x, int y){
@@ -26,6 +27,7 @@ public class Hero {
         texture = new Texture("stay.png");
         heroAnimation = new Animation(new TextureRegion(texture), 3, 1f);
         bound = new Rectangle(x, y, texture.getWidth(), texture.getHeight());
+        edge = 0;
     }
 
     public Vector3 getPosition() {
@@ -45,15 +47,16 @@ public class Hero {
     }
 
     public void update(float dt){
-        if (position.x>0)
-            velosity.add(WALL,0,0);
+        if (position.x > 0)
+            velosity.add(WALL, 0, 0);
         velosity.scl(dt);
-        position.add(velosity.x,0,0);
-        if (position.x>1700)
-            position.x=1700;
+        position.add(velosity.x, 0, 0);
+        if (position.x > 1700)
+            position.x = 1700;
         heroAnimation.updates(dt);
         bound.setPosition(position.x, position.y);
     }
+
 
     public void stay(){
         this.state=1;
@@ -73,10 +76,14 @@ public class Hero {
         this.heroAnimation = new Animation(new TextureRegion(texture), 4, 1f);
     }
 
-    public void walkleft(){
+    public void walkleft(int edge){
         state = 4;
         texture = new Texture("left_go.png");
         heroAnimation = new Animation(new TextureRegion(texture), 6, 1f);
+        this.edge = edge;
+    }
+
+    public void Walking(){
         velosity.x=1920;
     }
 
