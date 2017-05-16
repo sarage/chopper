@@ -2,6 +2,7 @@ package com.mygdx.game.sprites;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
+import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.math.Vector3;
 
 /**
@@ -13,13 +14,14 @@ public class Flasks {
     private Vector3 position;
     private Texture texture;
     private Animation flaskAnimation;
-
+    private Rectangle bound;
 
 
     public Flasks(String st, int x, int y){
         position = new Vector3(x,y,0);
         texture = new Texture(st);
         flaskAnimation = new Animation(new TextureRegion(texture), 3, 1f);
+        bound = new Rectangle(x, y, texture.getWidth(), texture.getHeight());
     }
 
     public Vector3 getPosition() {
