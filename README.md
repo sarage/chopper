@@ -1,5 +1,8 @@
 # Chopper
 ###### Маленькая игра про Чоппера, используется библиботека LibGDX под Android-приложение
+
+[![Watch the video](https://github.com/sarage/chopper/blob/master/readme/video.png)](https://youtu.be/pj6fZEG9vpw)
+
 ## Меню
 При открытии вы увидите меню 
 ![alt tag](https://github.com/sarage/chopper/blob/master/readme/%D0%BC%D0%B5%D0%BD%D1%8E.png)
