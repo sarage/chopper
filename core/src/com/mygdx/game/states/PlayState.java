@@ -12,13 +12,13 @@ import com.mygdx.game.sprites.Hero;
 public class PlayState extends State{
 
     private Hero hero;
-    private Texture bg;
+    private Texture background;
 
     public PlayState(GameStateManagment gsm) {
         super(gsm);
-        hero = new Hero(50,300);
+        hero = new Hero(50,50);
         camera.setToOrtho(false, MyGdxGame.WIDTH/2,MyGdxGame.HEIGHT/2);
-        bg = new Texture("wall.jpg");
+        background = new Texture("wall.jpg");
     }
 
     @Override
@@ -33,7 +33,7 @@ public class PlayState extends State{
     public void render(SpriteBatch sb) {
         sb.setProjectionMatrix(camera.combined);
         sb.begin();
-        sb.draw(bg, camera.position.x-(camera.viewportWidth),0);
+        sb.draw(background, 0,0,MyGdxGame.WIDTH/2,MyGdxGame.HEIGHT/2);
         sb.draw(hero.getHero(),hero.getPosition().x,hero.getPosition().y);
         sb.end();
     }
