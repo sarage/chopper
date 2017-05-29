@@ -4,7 +4,10 @@ import com.badlogic.gdx.ApplicationAdapter;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.audio.Music;
 import com.badlogic.gdx.graphics.GL20;
+<<<<<<< HEAD
 import com.badlogic.gdx.graphics.Texture;
+=======
+>>>>>>> 3255a3d3463f2dfa2a9e4295baacc919d714b16f
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.mygdx.game.states.GameStateManagment;
 import com.mygdx.game.states.MenuState;
@@ -13,6 +16,10 @@ public class MyGdxGame extends ApplicationAdapter {
 	public static final int WIDTH = 1920;
 	public static final int HEIGHT = 1080;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 3255a3d3463f2dfa2a9e4295baacc919d714b16f
 	public static final String TITLE = "Chopper";
 
     private GameStateManagment gsm;
